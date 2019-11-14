@@ -24,7 +24,7 @@ const takeScreenshot = async url => {
 		page.on("console", async msg => {
 			try {
 				const log = JSON.parse(msg.text());
-				if (!log.number) {
+				if (!log.tweet) {
 					throw new Error("invalid fanta");
 				}
 				await page.waitFor(1000); /* webfont */
