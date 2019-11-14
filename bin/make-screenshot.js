@@ -6,7 +6,7 @@ const outPath = config.paths.screenie;
 
 const startServer = () =>
 	new Promise(rt => {
-		const bundler = new Bundler(__dirname + "/../code/index.html");
+		const bundler = new Bundler(__dirname + "/../src/index.html");
 		bundler.on("buildEnd", () => {
 			rt(`http://localhost:${config.ports.test}`);
 		});

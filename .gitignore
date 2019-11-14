@@ -2,7 +2,7 @@
 node_modules
 dest/*
 !dest/.gitexists
-dist/*
+dist
 .env
 .glitch-assets
 .vscode

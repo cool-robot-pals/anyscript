@@ -1,0 +1,110 @@
+@font-face {
+	font-family: "segoe";
+	src: url("./font/segoe.woff");
+}
+@font-face {
+	font-family: "segoe";
+	src: url("./font/segoe-bold.woff");
+	font-weight: bold;
+}
+
+:root {
+	--bg: white;
+	--text: black;
+	--main: yellow;
+	--contrast: black;
+	--font: sans-serif;
+	--logo-font: sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: var(--font);
+	color: var(--text);
+	background: var(--bg);
+	width: 1280px;
+	height: 720px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	flex-direction: column;
+	box-sizing: border-box;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+}
+
+x-script {
+	display: flex;
+}
+
+x-script > * {
+	margin: 0.5rem 1rem;
+}
+
+x-script[data-layout="right"] {
+	flex-direction: row-reverse;
+	align-items: flex-end;
+}
+
+x-script[data-layout="left"] {
+	flex-direction: row;
+	align-items: flex-end;
+}
+
+x-script[data-layout="vertical"] {
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 90px;
+	letter-spacing: -0.03em;
+}
+x-script[data-word-logo="bold"] h1 x-script-word {
+	font-weight: bold;
+}
+x-script[data-word-logo="caps"] h1 {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+x-script[data-word-logo="smol"] h1 {
+	text-transform: lowercase;
+}
+
+x-script-logo {
+	font-family: var(--logo-font);
+	width: 1.9em;
+	height: 1.9em;
+	padding: 0.2em;
+	font-size: 120px;
+	line-height: 1.4ex;
+	text-transform: uppercase;
+	background: var(--main);
+	color: var(--contrast);
+	display: flex;
+	letter-spacing: -0.05em;
+	align-items: flex-end;
+	justify-content: flex-end;
+	font-weight: bold;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+x-script[data-outlines="true"] x-script-logo {
+	color: var(--main);
+	border: 4px solid var(--main);
+	background: transparent;
+}
+
+x-script[data-logo="round"] x-script-logo {
+	border-radius: 100%;
+	padding-right: 0.2em;
+}
+x-script[data-logo="app"] x-script-logo {
+	border-radius: 10%;
+}
